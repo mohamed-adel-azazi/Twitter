@@ -1,0 +1,47 @@
+mohamedadelazazi384@outlook.com
+mohamedadelazazi@gmail.com -> f al Github
+-------------------------------------------------
+1- Create Repo :
+	- create Repo name & add README.md file
+	- clone -> https://github.com/mohamed-adel-azazi/test_new_Github.git
+	- enter to path's my project take this path and open cmd
+	- on cmd or gitbash -> git clone + clone ==>>  git clone git@github.com:mohamed-adel384/test_github.git
+
+2- Add and Reset and commit :
+	- git status
+	- git add main.css or git add *  --- git reset head main.css
+	- git commit -m "message description"
+
+3- Push Local Changes To Remote Repository (Github):
+git branch -> main بيعرفني البرنشات للي موجودة عندي في ال لوكل
+git remote -v -> origin  https://github.com/mohamed-adel-azazi/test_new_Github.git (fetch)
+		origin  https://github.com/mohamed-adel-azazi/test_new_Github.git (push)
+
+        main (local pc) -> origin (Github)
+
+Syntax -> git push RemoteName BranchName => 
+		
+		- git push origin main 
+
+4- Pull Changes From Remote Repository (Github) invite = Collaborator :
+	
+	- git pull RemoteName = git pull origin
+
+-------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+5- Create Repository From Existing Project :
+	- Folder (repo_is_exist)
+	- git init
+	- touch index.html
+	- git status
+	- git add index.html
+	- git commit -m "Create new repo and new file index"
+			HTTP Not SSH
+	- git remote add origin git@github.com:mohamed-adel-azazi/repo_is_exist.git
+	- git push -u origin main
+
+
+
+
+
+

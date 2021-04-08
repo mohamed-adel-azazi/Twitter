@@ -1,0 +1,205 @@
+** mkdir myProject
+cd myProject
+py -m venv env mohamedAdelvenv
+
+** Activating a virtual environment:
+
+.\env\Scripts\activate
+.\venv\Scripts\activate
+
+
+    > pip install flask
+    > set FLASK_APP=app.py
+    > set FLASK_ENV=development
+    > flask run
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    <<   Web-App-Twitter  >>
+1 - Getting-Started : => pip install flask
+    - app.py  
+##################################################################
+2- Templates :
+    - app.py 
+    - static:
+        - main.css
+    - templates:
+        - layout.html
+        - home.html
+        - about.html
+######################################################################
+3- Forms-and-Validation: => pip install Flask-WTF , pip install email_validator
+    - app.py 
+    - forms.py
+    - static
+        - main.css
+    - templates
+        - layout.html
+        - home.html
+        - about.html
+        - login.html
+        - register.html
+#########################################################################
+4- Database: => python -m pip install -U Flask-SQLAlchemy , python -m pip install PyMySQL
+    -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py 
+#################################################################################
+5-Package-Structure:
+  -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py 
+
+##################################################################################
+6-Login-Auth:=> python -m pip install flask-bcrypt , python -m pip install flask-login
+    -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html
+            * account.html 
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py                 
+
+##################################################################################
+7-User-Account-Profile-Pic:  =>  pip install pillow
+  -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+            * account.html
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py    
+##################################################################################
+8-Posts:    
+    -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+            * account.html
+            * create_post.html
+            * post.html
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py 
+
+##################################################################################
+9-Pagination:    ترقيم الصفحات
+    -  flaskapp
+        -static
+            * main.css
+        -templates 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+            * account.html
+            * create_post.html
+            * post.html
+            * user_posts.html
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+
+    -run.py 
+####################################################################################
+10-Password-Reset-Email: => 
+    1- models.py => (from itsdangerous import TimedJSONWebSignatureSerializer as Serializer,def-> get_reset_token,def-> verify_reset_token)
+    2- forms.py => (RequestResetForm(),ResetPasswordForm())
+    3- routes.py => (def-> reset_password,def-> reset_token(token),def-> send_reset_email(user)) 
+    pip install flask-mail
+    4- __init__.py => (app.config['MAIL_SERVER'] = 'smtp.googlemail.com',app.config['MAIL_PORT'] = 587,app.config['MAIL_USE_TLS'] = True
+    app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+    app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+    mail = Mail(app),)
+    5-templates:
+	    * reset_request.html
+        * reset_token.html
+
+######################################################################################################
+11-Blueprints:
+    -  flaskapp
+        -static:
+            * main.css
+        -templates: 
+            * layout.html
+            * home.html 
+            * about.html
+            * register.html      
+            * login.html 
+            * account.html
+            * create_post.html
+            * post.html
+            * user_posts.html
+            * reset_request.html
+            * reset_token.html
+
+        main:
+            -__init__.py
+            -routes.py 
+        users:
+            -__init__.py
+            -forms.py
+            -utils.py
+            -routes.py
+        posts:
+            -__init__.py
+            -forms.py
+            -routes.py     
+
+        -__init__.py
+        -forms.py
+        -models.py
+        -routes.py
+        -config.py
+
+    -run.py 
